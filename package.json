@@ -1,12 +1,24 @@
 {
   "name": "duffy",
   "version": "1.0.0",
-  "description": "",
+  "description": "Rapidly find the largest files in a given directory. [duffy = du(1) + diffy]",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
+  "bin": "index.js",
+  "keywords": [
+    "du",
+    "disk",
+    "disk space",
+    "diffy"
+  ],
   "author": "harry lachenmayer <harrylachenmayer@gmail.com>",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "bytes": "^3.1.0",
+    "diffy": "^2.1.0",
+    "level-mem": "^3.0.1",
+    "minimist": "^1.2.0",
+    "pad": "^2.2.2",
+    "split": "^1.0.1",
+    "uint64be": "^2.0.2"
+  }
 }
