@@ -1,6 +1,6 @@
 {
   "name": "duffy",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Rapidly find the largest files in a given directory. [duffy = du(1) + diffy]",
   "main": "index.js",
   "bin": "index.js",
