@@ -1,19 +1,35 @@
 # `duffy` = [`du(1)`](https://linux.die.net/man/1/du) + [`diffy`](https://npm.im/diffy)
 
+> Rapidly find the largest files in a given directory.
+
 ```
 npm install -g duffy
 duffy <directory> [-n <limit>]
 ```
 
-Rapidly find the largest files in a given directory.
+## Examples
 
-This is kind of like running the shell command
+### How to find the largest files in the current directory
+
+```
+duffy
+```
+
+### How to find the 10 largest files on disk
+
+```
+duffy -n 10 /
+```
+
+## What is it?
+
+This is kind of like running the shell command [`du`](https://linux.die.net/man/1/du) ("disk usage") like this, to find the largest files in a directory:
 
 ```
 du -ah <directory> | sort -rh | head -n 10
 ```
 
-to find the largest files in a directory, except that you don't have to wait for `du` to finish: the list of biggest files gets updated in real time as it runs.
+`duffy` is a wrapper around `du` which updates the list of biggest files in real time while the command is running.
 
 This is useful when you are trying to hunt down huge files in large directories or on a slow disk, and you care more about doing it quickly than about `du` exploring absolutely every single file before you can see anything.
 
@@ -35,19 +51,9 @@ $ duffy -n 10
 192KB     ./node_modules/level-mem/node_modules/abstract-leveldown
 ```
 
-## Examples
+## Contributions
 
-How to find the largest files in the current directory:
-
-```
-duffy
-```
-
-How to find the 10 largest files on disk:
-
-```
-duffy -n 10 /
-```
+Pull requests welcome! This is a fairly simple script that I hacked together in a day, so there might be some rough edges. Feel free to fork it to change any of the behavior.
 
 ## License
 
